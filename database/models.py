@@ -63,6 +63,7 @@ class Booking(Base):
     user_sub = Column(String, nullable=False)
     event_id = Column(Integer, ForeignKey('event.id'), nullable=False)
     seats = Column(ARRAY(Integer), nullable=False)
+    status = Column(String, nullable=False)
 
     event = relationship("Event")
 
